@@ -1,0 +1,153 @@
+@keyframes spinning_r{
+    100% {transform: rotate(360deg);}
+}
+@keyframes spinning_l{
+    100% {transform: rotate(-360deg);}
+}
+@keyframes slideup{
+    from{
+        top: calc(50% - 5vw);
+    }
+    to{
+        top: 5%;
+    }
+}
+@keyframes slideright{
+    from{
+        right: calc(50% - 5vw);
+    }
+    to{
+        right: 5%;
+    }
+}
+@keyframes slidedown{
+    from{
+        bottom: calc(50% - 5vw);
+    }
+    to{
+        bottom: 5%;
+    }
+}
+@keyframes slideleft{
+    from{
+        left: calc(50% - 5vw);
+    }
+    to{
+        left: 5%;
+    }
+}
+@keyframes colorup{
+    0%{
+        background-color: darkred;
+    }
+    20%{
+        background-color: fuchsia;
+    }
+    40%{
+        background-color: greenyellow;
+    }
+    60%{
+        background-color: indigo;
+    }
+    80%{
+        background-color: lightblue;
+    }
+    100%{
+        background-color: orange;
+    }
+}
+@keyframes colorright{
+    0%{
+        background-color: powderblue;
+    }
+    20%{
+        background-color: royalblue;
+    }
+    40%{
+        background-color: greenyellow;
+    }
+    60%{
+        background-color: silver;
+    }
+    80%{
+        background-color: tomato;
+    }
+    100%{
+        background-color: cadetblue;
+    }
+}
+@keyframes colordown{
+    0%{
+        background-color: cornflowerblue;
+    }
+    20%{
+        background-color: darkviolet;
+    }
+    40%{
+        background-color: darkorange;
+    }
+    60%{
+        background-color: firebrick;
+    }
+    80%{
+        background-color: green;
+    }
+    100%{
+        background-color: orange;
+    }
+}
+@keyframes colorleft{
+    0%{
+        background-color: lavender;
+    }
+    20%{
+        background-color: lightcoral;
+    }
+    40%{
+        background-color: lime;
+    }
+    60%{
+        background-color: mediumblue;
+    }
+    80%{
+        background-color: orangered;
+    }
+    100%{
+        background-color: seagreen;
+    }
+}
+html{
+    background-color: rgb(8, 8, 56);
+}
+.up{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 7%;
+    position: absolute;
+    left: calc(50% - 5vw);
+    animation: spinning_r 3s infinite linear, slideup 3s infinite linear alternate, colorup 7s infinite linear alternate;
+}
+.right{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 7%;
+    position: absolute;
+    top: calc(50% - 5vw);
+    animation: spinning_r 2s infinite linear, slideright 9s infinite linear alternate, colorright 5s infinite linear alternate;
+}
+.down{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 7%;
+    position: absolute;
+    left: calc(50% - 5vw);
+    animation: spinning_l 1s infinite linear, slidedown 4.5s infinite linear alternate, colordown 4s infinite linear alternate;
+}
+.left{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 7%;
+    position: absolute;
+    top: calc(50% - 5vw);
+    animation: spinning_l 7s infinite linear, slideleft 1.5s infinite linear alternate, colorleft 10s infinite linear alternate;
+}
